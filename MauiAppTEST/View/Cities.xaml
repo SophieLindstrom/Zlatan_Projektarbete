@@ -19,7 +19,7 @@
                         SelectionMode="None">
 
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="model:City">
+                    <DataTemplate x:DataType="model:C">
                         <Grid Padding="10">
                             <Frame HeightRequest="125"
                                Padding="0"
