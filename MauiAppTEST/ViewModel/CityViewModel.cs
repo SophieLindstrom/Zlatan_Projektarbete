@@ -15,9 +15,10 @@ namespace MauiAppTEST.ViewModel
         CityServices cityService;
         public ObservableCollection<City> Cities { get; } = new();
 
-        public CityViewModel(CityServices cityServices)
+        public CityViewModel(CityServices cityService)
         {
-            this.cityService = cityServices;
+            Title = "Cities";
+            this.cityService = cityService;
         }
     }
 }
