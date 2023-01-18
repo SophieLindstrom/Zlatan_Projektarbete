@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MauiAppTEST.TestData
 {
-    internal class City
+    public class City
     {
         public City()
         {

@@ -1,41 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MauiAppTEST.ViewModel"
+             xmlns:viewmodel2="clr-namespace:MauiAppTEST.View"
+             xmlns:viewmodel3="clr-namespace:MauiAppTEST"
+             x:DataType="viewmodel:MainViewModel"
              x:Class="MauiAppTEST.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
+    <VerticalStackLayout
+        Spacing="25"
+        Margin="10"
+        Padding="30,0"
+        HorizontalOptions="Center">
+        <!--Command="{Binding NavigationCommand}"-->
+
+        <Button Text="CityPage"
+                Command="{Binding NavigationCommand}"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>
+
+<!--<CollectionView ItemsSource="{Binding Items}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                    <Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer
+                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, Path=TapCommand}"
+                        CommandParameter="{Binding .}"
+                    />
+                        </Frame.GestureRecognizers>
+                    </Frame>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
-
-</ContentPage>
+                </VerticalStackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>-->

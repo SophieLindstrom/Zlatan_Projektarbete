@@ -1,9 +1,14 @@
-﻿namespace MauiAppTEST;
+﻿using MauiAppTEST.View;
+
+namespace MauiAppTEST;
 
 public partial class AppShell : Shell
 {
 	public AppShell()
 	{
 		InitializeComponent();
+
+		Routing.RegisterRoute(nameof(CityPage), typeof(CityPage));
+		Routing.RegisterRoute(nameof(DetailPage), typeof(DetailPage));
 	}
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiAppTEST.View.Cities"
-             xmlns:city=""
+             xmlns:testData="clr-namespace:MauiAppTEST.TestData"
+             x:Class="MauiAppTEST.View.CityPage"
              xmlns:viewmodel="clr-namespace:MauiAppTEST.ViewModel"
              x:DataType="viewmodel:CityViewModel"
              Title="{Binding Cities}">
@@ -19,7 +19,7 @@
                         SelectionMode="None">
 
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="model:City">
+                    <DataTemplate x:DataType="testData:City">
                         <Grid Padding="10">
                             <Frame HeightRequest="125"
                                Padding="0"
@@ -42,11 +42,11 @@
                                                      Padding="10"
                                                      VerticalOptions="Center">
                                         <Label Text="{Binding Name}"
-                                           FontAttributes="Bold"
-                                           Style="{StaticResource LargeLabel}"/>
+                                           FontAttributes="Bold"/>
+                                        <!--Style="{StaticResource LargeLabel}"/>-->
                                         <Label Text="{Binding Location}"
-                                           FontAttributes="Bold"
-                                           Style="{StaticResource MediumLabel}"/>
+                                           FontAttributes="Bold"/>
+                                        <!--Style="{StaticResource MediumLabel}"/>-->
 
                                     </VerticalStackLayout>
                                 </Grid>
@@ -60,7 +60,7 @@
             <Button 
             Text="Get Monkeys"
             Style="{StaticResource ButtonOutline}"
-            Command="{Binding GetMonkeysCommand}"
+            Command="{Binding GetCityCommand}"
             IsEnabled="{Binding IsNotBusy}"
             Grid.Row ="1"
             Margin="8"/>

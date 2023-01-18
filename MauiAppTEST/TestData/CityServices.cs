@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Google.Crypto.Tink.Mac;
 
 namespace MauiAppTEST.TestData
 {
-    internal class CityServices
+    public class CityServices
     {
 
         public async Task<List<City>> GetCities()

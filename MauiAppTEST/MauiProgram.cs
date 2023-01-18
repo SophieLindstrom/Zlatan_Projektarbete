@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiAppTEST.View;
+using MauiAppTEST.ViewModel;
+using Microsoft.Extensions.Logging;
 
 namespace MauiAppTEST;
 
@@ -15,10 +17,15 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-#if DEBUG
 		builder.Logging.AddDebug();
-#endif
+        builder.Services.AddSingleton<MainViewModel>();
+        builder.Services.AddSingleton<CityViewModel>();
+        builder.Services.AddSingleton<DetailPage>();
 
-		return builder.Build();
+        builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddSingleton<CityPage>();
+        builder.Services.AddSingleton<DetailPage>();
+
+        return builder.Build();
 	}
 }

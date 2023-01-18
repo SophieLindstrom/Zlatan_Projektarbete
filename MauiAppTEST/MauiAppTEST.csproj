@@ -55,7 +55,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="View\Cities.xaml">
+	  <Compile Update="View\CityPage.xaml.cs">
+	    <DependentUpon>CityPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="DetailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\CityPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
