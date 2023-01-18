@@ -54,7 +54,7 @@
 	  <None Remove="Resources\Images\NY.png" />
 	  <None Remove="Resources\Images\paris.png" />
 	  <None Remove="Resources\Images\Rome.png" />
-	  <None Remove="Resources\Images\Stockholm.png" />
+	  <None Remove="Resources\Images\stockholm.png" />
 	  <None Remove="Resources\Images\Tokyo.png" />
 	  <None Remove="Resources\Images\Venice.png" />
 	</ItemGroup>
