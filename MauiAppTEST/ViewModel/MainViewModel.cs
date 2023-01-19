@@ -30,6 +30,9 @@ namespace MauiAppTEST.ViewModel
         [RelayCommand]
         Task NavigateToSignUpPage() => Shell.Current.GoToAsync(nameof(SignUpPage));
 
+        [RelayCommand]
+        Task Back() => Shell.Current.GoToAsync("..");
+
         //[ObservableProperty]
         //ObservableCollection<string> items;
 

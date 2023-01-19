@@ -5,8 +5,8 @@
              x:Class="MauiAppTEST.View.CityPage"
              xmlns:viewmodel="clr-namespace:MauiAppTEST.ViewModel"
              x:DataType="viewmodel:CityViewModel"
+             Shell.PresentationMode="ModalAnimated"
              Title="Select a City">
-    <!--Shell.PresentationMode="ModalAnimated"-->
 
 
     <ScrollView>

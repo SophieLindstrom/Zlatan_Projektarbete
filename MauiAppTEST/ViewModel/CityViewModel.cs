@@ -8,6 +8,7 @@ namespace MauiAppTEST.ViewModel
 {
     public partial class CityViewModel : BaseViewModel
     {
+
         CityServices cityService;
         public ObservableCollection<City> Cities { get; } = new();
 
@@ -34,8 +35,6 @@ namespace MauiAppTEST.ViewModel
             {"City", city }
         });
         }
-
-
 
 
         [RelayCommand]
