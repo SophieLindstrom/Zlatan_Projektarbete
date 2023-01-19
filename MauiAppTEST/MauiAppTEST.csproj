@@ -92,4 +92,6 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionMauiAppTESTHideInfoBar="True" /></VisualStudio></ProjectExtensions>
+
 </Project>
