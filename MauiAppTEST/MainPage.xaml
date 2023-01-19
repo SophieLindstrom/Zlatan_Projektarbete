@@ -23,6 +23,9 @@
         <Button Text="LoginPage"
                 Command="{Binding NavigateToLoginPageCommand}"/>
 
+        <Button Text="SignUpPage"
+                Command="{Binding NavigateToSignUpPageCommand}"/>
+
     </VerticalStackLayout>
 
 </ContentPage>
