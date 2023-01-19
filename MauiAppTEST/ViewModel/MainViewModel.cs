@@ -29,6 +29,8 @@ namespace MauiAppTEST.ViewModel
 
         [RelayCommand]
         Task NavigateToSignUpPage() => Shell.Current.GoToAsync(nameof(SignUpPage));
+        [RelayCommand]
+        Task NavigateToProfilePage() => Shell.Current.GoToAsync(nameof(ProfilePage));
 
         [RelayCommand]
         Task Back() => Shell.Current.GoToAsync("..");

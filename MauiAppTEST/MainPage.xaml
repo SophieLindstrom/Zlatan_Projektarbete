@@ -26,6 +26,9 @@
         <Button Text="SignUpPage"
                 Command="{Binding NavigateToSignUpPageCommand}"/>
 
+        <Button Text="ProfilePage"
+                Command="{Binding NavigateToProfilePageCommand}"/>
+
     </VerticalStackLayout>
 
 </ContentPage>

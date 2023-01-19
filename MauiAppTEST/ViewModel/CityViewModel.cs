@@ -14,6 +14,7 @@ namespace MauiAppTEST.ViewModel
 
         public CityViewModel()
         {
+            LoadCities();
             //Title = "Cities";
             //this.cityService = cityService;
         }
@@ -23,6 +24,24 @@ namespace MauiAppTEST.ViewModel
         //    base.OnNavigatedTo(args);
         //}
 
+        void LoadCities()
+        {
+            List<City> cities = new List<City>()
+                {
+                new City(){ Name="Paris", Image = "paris.png"},
+                new City(){ Name="Venice", Image = "venice.png"},
+                new City(){ Name="Rome", Image = "rome.png"},
+                new City(){ Name="Bangkok", Image = "bangkok.png" },
+                new City(){ Name="Stockholm", Image = "stockholm.png" },
+                new City(){ Name="New York", Image = "ny.png" },
+                new City(){ Name="Tokyo", Image = "tokyo.png"},
+                new City(){ Name="Los Angeles", Image = "la.png" },
+                 };
+
+            foreach (var city in cities)
+                Cities.Add(city);
+        }
+
 
         [RelayCommand]
         async Task GoToActivityPageAsync(City city)
@@ -31,9 +50,9 @@ namespace MauiAppTEST.ViewModel
                 return;
 
             await Shell.Current.GoToAsync($"{nameof(ActivityPage)}", true, new Dictionary<string, object>
-        {
+            {
             {"City", city }
-        });
+            });
         }
 
 
