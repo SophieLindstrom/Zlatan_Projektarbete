@@ -20,11 +20,13 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
         builder.Services.AddSingleton<MainViewModel>();
         builder.Services.AddSingleton<CityViewModel>();
-        builder.Services.AddSingleton<DetailPage>();
+        builder.Services.AddSingleton<DetailViewModel>();
+        builder.Services.AddSingleton<LoginViewModel>();
 
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddSingleton<CityPage>();
         builder.Services.AddSingleton<DetailPage>();
+        builder.Services.AddSingleton<LoginPage>();
 
         return builder.Build();
 	}

@@ -5,7 +5,7 @@
              x:Class="MauiAppTEST.View.CityPage"
              xmlns:viewmodel="clr-namespace:MauiAppTEST.ViewModel"
              x:DataType="viewmodel:CityViewModel"
-             Title="{Binding Cities}">
+             Title="Select a City">
     <VerticalStackLayout>
 
         <Grid ColumnDefinitions="*,*"
@@ -16,7 +16,8 @@
             <CollectionView BackgroundColor="Transparent"
                         Grid.ColumnSpan="2"
                         ItemsSource="{Binding Cities}"
-                        SelectionMode="None">
+                        SelectionMode="Single">
+                
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="testData:City">
@@ -25,10 +26,10 @@
                                Padding="0"
                                Style="{StaticResource CardView}"
                                >
-                                <Frame.GestureRecognizers>
+                                <!--<Frame.GestureRecognizers>
                                     <TapGestureRecognizer CommandParameter="{Binding .}"
                                                       Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CityViewModel}}, Path=GoToDetailsCommand}"/>
-                                </Frame.GestureRecognizers>
+                                </Frame.GestureRecognizers>-->
                                 <Grid Padding="0"
                                   ColumnDefinitions="125, *">
 
@@ -58,7 +59,7 @@
 
             </CollectionView>
             <Button 
-            Text="Get Monkeys"
+            Text="Get Cities"
             Style="{StaticResource ButtonOutline}"
             Command="{Binding GetCityCommand}"
             IsEnabled="{Binding IsNotBusy}"

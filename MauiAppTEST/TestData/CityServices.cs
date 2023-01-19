@@ -8,8 +8,7 @@ namespace MauiAppTEST.TestData
 {
     public class CityServices
     {
-
-        public async Task<List<City>> GetCities()
+        public List<City> GetCities()
         {
             List<City> cityList = new List<City>()
             {

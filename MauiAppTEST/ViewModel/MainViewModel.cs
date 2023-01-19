@@ -24,6 +24,9 @@ namespace MauiAppTEST.ViewModel
         [RelayCommand]
         Task NavigateToDetailPage() => Shell.Current.GoToAsync(nameof(DetailPage));
 
+        [RelayCommand]
+        Task NavigateToLoginPage() => Shell.Current.GoToAsync(nameof(LoginPage));
+
         //[ObservableProperty]
         //ObservableCollection<string> items;
 

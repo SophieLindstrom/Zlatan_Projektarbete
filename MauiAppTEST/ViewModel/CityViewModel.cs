@@ -1,13 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using MauiAppTEST.TestData;
-using MvvmHelpers;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MauiAppTEST.ViewModel
 {
@@ -36,10 +30,25 @@ namespace MauiAppTEST.ViewModel
             try
             {
                 IsBusy = true;
-                var cities = await cityService.GetCities();
+                //var cities = cityService.GetCities();
 
-                if (cities.Count != 0)
-                    cities.Clear();
+                //if (cities.Count != 0)
+                //    cities.Clear();
+
+                //foreach (var city in cities)
+                //    Cities.Add(city);
+
+                List<City> cities = new List<City>()
+                {
+                new City(){ Name="Paris", Image = "paris.png"},
+                new City(){ Name="Venice", Image = "venice.png"},
+                new City(){ Name="Rome", Image = "rome.png"},
+                new City(){ Name="Bangkok", Image = "bangkok.png" },
+                new City(){ Name="Stockholm", Image = "stockholm.png" },
+                new City(){ Name="New York", Image = "ny.png" },
+                new City(){ Name="Tokyo", Image = "tokyo.png"},
+                new City(){ Name="Los Angeles", Image = "la.png" },
+                 };
 
                 foreach (var city in cities)
                     Cities.Add(city);
