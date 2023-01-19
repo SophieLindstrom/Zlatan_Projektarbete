@@ -5,7 +5,7 @@
              Title="ActivityPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="ActivityPage"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

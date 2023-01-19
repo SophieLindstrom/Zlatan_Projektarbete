@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using MauiAppTEST.TestData;
+using MauiAppTEST.View;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 
@@ -20,6 +21,22 @@ namespace MauiAppTEST.ViewModel
         //{
         //    base.OnNavigatedTo(args);
         //}
+
+
+        [RelayCommand]
+        async Task GoToActivityPageAsync(City city)
+        {
+            if (city is null)
+                return;
+
+            await Shell.Current.GoToAsync($"{nameof(ActivityPage)}", true, new Dictionary<string, object>
+        {
+            {"City", city }
+        });
+        }
+
+
+
 
         [RelayCommand]
         async Task GetCityAsync()

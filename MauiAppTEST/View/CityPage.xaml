@@ -6,32 +6,48 @@
              xmlns:viewmodel="clr-namespace:MauiAppTEST.ViewModel"
              x:DataType="viewmodel:CityViewModel"
              Title="Select a City">
-    <VerticalStackLayout>
+    <!--Shell.PresentationMode="ModalAnimated"-->
 
-        <Grid ColumnDefinitions="*,*"
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Tap a City to see activities"
+               Style="{StaticResource MediumLabel}"
+               HorizontalOptions="Center"
+               />
+
+            <SearchBar Placeholder="City..">
+
+            </SearchBar>
+
+
+            <Grid ColumnDefinitions="*,*"
           ColumnSpacing="5"
           RowDefinitions="*,Auto"
           RowSpacing="0">
 
-            <CollectionView BackgroundColor="Transparent"
-                        Grid.ColumnSpan="2"
-                        ItemsSource="{Binding Cities}"
-                        SelectionMode="Single">
-                
 
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="testData:City">
-                        <Grid Padding="10">
+                <CollectionView BackgroundColor="Transparent"
+                                Grid.ColumnSpan="2"
+                                ItemsSource="{Binding Cities}"
+                                SelectionMode="Single">
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="testData:City">
+
                             <Frame HeightRequest="125"
                                Padding="0"
                                Style="{StaticResource CardView}"
                                >
-                                <!--<Frame.GestureRecognizers>
+
+                                <Frame.GestureRecognizers>
                                     <TapGestureRecognizer CommandParameter="{Binding .}"
-                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CityViewModel}}, Path=GoToDetailsCommand}"/>
-                                </Frame.GestureRecognizers>-->
-                                <Grid Padding="0"
-                                  ColumnDefinitions="125, *">
+                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CityViewModel}}, Path=GoToActivityPageCommand}"/>
+                                </Frame.GestureRecognizers>
+
+                                <HorizontalStackLayout Padding="10"
+                                                   Spacing="10">
+
 
                                     <Image Aspect="AspectFill"
                                    Source="{Binding Image}"
@@ -39,26 +55,18 @@
                                    HeightRequest="125"
                                    />
 
-                                    <VerticalStackLayout Grid.Column="1"
-                                                     Padding="10"
-                                                     VerticalOptions="Center">
-                                        <Label Text="{Binding Name}"
-                                           FontAttributes="Bold"/>
-                                        <!--Style="{StaticResource LargeLabel}"/>-->
-                                        <Label Text="{Binding Location}"
-                                           FontAttributes="Bold"/>
-                                        <!--Style="{StaticResource MediumLabel}"/>-->
+                                    <Label Text="{Binding Name}"
+                                       FontAttributes="Bold"
+                                       Style="{StaticResource MediumLabel}"/>
 
-                                    </VerticalStackLayout>
-                                </Grid>
+                                </HorizontalStackLayout>
                             </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
 
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
+                </CollectionView>
 
-            </CollectionView>
-            <Button 
+                <Button 
             Text="Get Cities"
             Style="{StaticResource ButtonOutline}"
             Command="{Binding GetCityCommand}"
@@ -66,15 +74,26 @@
             Grid.Row ="1"
             Margin="8"/>
 
-            <ActivityIndicator IsVisible="{Binding IsBusy}"
+                <ActivityIndicator IsVisible="{Binding IsBusy}"
                            IsRunning="{Binding IsBusy}"
                            HorizontalOptions="FillAndExpand"
                            VerticalOptions="CenterAndExpand"
                            Grid.RowSpan="2"
                            Grid.ColumnSpan="2"/>
 
-        </Grid>
+            </Grid>
 
 
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>
+
+<!--<Frame HeightRequest="125"
+                               Padding="0"
+                               Style="{StaticResource CardView}"
+                               >-->
+<!--<Frame.GestureRecognizers>
+                                    <TapGestureRecognizer CommandParameter="{Binding .}"
+                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CityViewModel}}, Path=GoToDetailsCommand}"/>
+                                </Frame.GestureRecognizers>-->
