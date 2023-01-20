@@ -6,9 +6,15 @@ public partial class LoginPage : ContentPage
 {
 	public LoginPage(LoginViewModel vm)
 	{
-		InitializeComponent();
-		BindingContext = vm;
-	}
+        InitializeComponent();
+        BindingContext = vm;
+    }
+    
+    async void OnButtonClicked(object sender, EventArgs args)
+        {
+            Console.WriteLine("Vi klickade");
+            await Shell.Current.GoToAsync(nameof(ProfilePage));
+        }
     protected override void OnNavigatedTo(NavigatedToEventArgs args)
     {
         base.OnNavigatedTo(args);
