@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppTEST.View.LoginPage"
+             xmlns:viewmodel="clr-namespace:MauiAppTEST.ViewModel"
+             x:DataType="viewmodel:LoginViewModel"
              Title="Sign in and let's party!">
     <ContentPage.Resources>
         <Style TargetType="Entry">
@@ -41,7 +43,7 @@
         <Grid>
             <Frame Style="{StaticResource entryWrapper}">
                 <Grid ColumnDefinitions="*" ColumnSpacing="10">
-                    <Entry Placeholder="Email" x:Name="myTextBoxMail" Text="{Binding MyText}"
+                    <Entry Placeholder="Email" x:Name="myTextBoxMail" Text="My text"
                     Grid.Column="2" />
                 </Grid>
             </Frame>
@@ -51,7 +53,7 @@
         <Grid>
             <Frame Style="{StaticResource entryWrapper}">
                 <Grid ColumnDefinitions="*" ColumnSpacing="10">
-                    <Entry Placeholder="Password" IsPassword="true" x:Name="myTextBoxPassword"  Text="{Binding MyText}"
+                    <Entry Placeholder="Password" IsPassword="true" x:Name="myTextBoxPassword"  Text="My Text"
                     Grid.Column="2" />
                 </Grid>
             </Frame>
@@ -62,9 +64,11 @@
             Grid.Row="1"
             Grid.Column="0"
             Margin="8"
-            IsEnabled="{Binding IsNotBusy}"
             Text="Sign in" FontSize="Medium"
-             Clicked="OnButtonClicked"/>
+             />
+
+            <!--IsEnabled="{Binding IsNotBusy}"-->
+
         </Grid>
 
         <Label FontAttributes="Bold" Text="Forgot Password?" TextColor="Gray" HorizontalTextAlignment="Center" />

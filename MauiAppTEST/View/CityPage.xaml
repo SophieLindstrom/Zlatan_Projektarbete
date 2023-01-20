@@ -8,7 +8,6 @@
              Shell.PresentationMode="ModalAnimated"
              Title="Select a City">
 
-
     <ScrollView>
         <VerticalStackLayout>
             <Label Text="Tap a City to see activities"
@@ -25,7 +24,6 @@
           ColumnSpacing="5"
           RowDefinitions="*,Auto"
           RowSpacing="0">
-
 
                 <CollectionView BackgroundColor="Transparent"
                                 Grid.ColumnSpan="2"
