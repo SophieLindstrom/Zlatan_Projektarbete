@@ -28,7 +28,7 @@ namespace MauiAppTEST.ViewModel
             // {
                 // sätta cookie eller session lr något
                 // gå till profilsidan
-                //await Shell.Current.GoToAsync(nameof(ProfilePage));
+                await Shell.Current.GoToAsync(nameof(ProfilePage));
             // }
         }
     }

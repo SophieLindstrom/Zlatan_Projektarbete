@@ -15,7 +15,7 @@ namespace MauiAppTEST.ViewModel
     {
         public MainViewModel()
         {
-
+            
         }
 
         [RelayCommand]

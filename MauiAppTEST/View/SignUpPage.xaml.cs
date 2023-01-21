@@ -4,7 +4,7 @@ namespace MauiAppTEST.View;
 
 public partial class SignUpPage : ContentPage
 {
-    public SignUpPage(LoginViewModel vm)
+    public SignUpPage(SignUpViewModel vm)
     {
         InitializeComponent();
         BindingContext = vm;
