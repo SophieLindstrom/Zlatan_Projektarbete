@@ -36,6 +36,8 @@
                                        FontAttributes="Bold"
                                        Style="{StaticResource MediumLabel}"/>
 
+                                <CheckBox></CheckBox>
+
                             </HorizontalStackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

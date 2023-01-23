@@ -12,5 +12,6 @@ public partial class ActivityPage : ContentPage
     protected override void OnNavigatedTo(NavigatedToEventArgs args)
     {
         base.OnNavigatedTo(args);
+        //MainThread.BeginInvokeOnMainThread(async () => { await RunService(); });
     }
 }

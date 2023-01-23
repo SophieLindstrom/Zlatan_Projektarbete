@@ -59,6 +59,22 @@
                 <Setter Property="FontSize" Value="24"/>
             </Style>
 
+            <Style TargetType="Entry">
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="TextColor" Value="Blue" />
+            </Style>
+            <Style x:Key="entryWrapper"
+               TargetType="Frame">
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="BorderColor" Value="Gray" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+            
             <Style TargetType="HorizontalStackLayout">
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>

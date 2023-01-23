@@ -4,8 +4,10 @@
              x:Class="MauiAppTEST.View.LoginPage"
              xmlns:viewmodel="clr-namespace:MauiAppTEST.ViewModel"
              x:DataType="viewmodel:LoginViewModel"
+             Shell.PresentationMode="ModalAnimated"
              Title="Sign in and let's party!">
-    <ContentPage.Resources>
+    
+    <!--<ContentPage.Resources>
         <Style TargetType="Entry">
             <Setter Property="HorizontalOptions" Value="Fill" />
             <Setter Property="VerticalOptions" Value="Center" />
@@ -21,7 +23,7 @@
             <Setter Property="Padding" Value="10" />
             <Setter Property="CornerRadius" Value="10" />
         </Style>
-    </ContentPage.Resources>
+    </ContentPage.Resources>-->
 
     <VerticalStackLayout>
         <Border StrokeShape="RoundRectangle 80"
@@ -65,9 +67,9 @@
             Grid.Column="0"
             Margin="8"
             Text="Sign in" FontSize="Medium"
-             />
+            IsEnabled="{Binding IsNotBusy}"
+                />
 
-            <!--IsEnabled="{Binding IsNotBusy}"-->
 
         </Grid>
 

@@ -4,6 +4,7 @@ using MauiAppTEST.View;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 
+
 namespace MauiAppTEST.ViewModel
 {
     public partial class CityViewModel : BaseViewModel

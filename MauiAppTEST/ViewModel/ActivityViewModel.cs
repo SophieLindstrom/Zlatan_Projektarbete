@@ -12,7 +12,6 @@ namespace MauiAppTEST.ViewModel
         {
             GetActivitiesAsync();
         }
-
         void GetActivitiesAsync()
         {
             if (IsBusy)
