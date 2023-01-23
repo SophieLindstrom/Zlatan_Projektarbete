@@ -30,7 +30,24 @@
                 <Setter Property="BorderWidth" Value="2"/>
                 <Setter Property="HeightRequest" Value="50"/>
                 <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="FontSize" Value="30"/>
             </Style>
+
+            <Style x:Key="SmallButton" BasedOn="{StaticResource ButtonOutline}" TargetType="Button">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="BorderColor" Value="{StaticResource Primary}"/>
+                <Setter Property="Background" Value="{StaticResource PrimaryDark}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="Margin" Value="2"/>
+            </Style>
+
+            <Style x:Key="ExpandableFrames" TargetType="Frame">
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="IsVisible" Value="true"/>
+            </Style>
+
 
             <Style TargetType="Label" x:Key="BaseLabel">
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
@@ -47,7 +64,7 @@
 
             <Style x:Key="MediumLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
                 <Setter Property="FontSize" Value="16"/>
-                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
 

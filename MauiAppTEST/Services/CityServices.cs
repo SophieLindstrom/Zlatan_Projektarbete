@@ -8,7 +8,7 @@ namespace MauiAppTEST.TestData
 {
     public class CityServices
     {
-        public List<City> GetCities()
+        public static List<City> GetCities()
         {
             List<City> cityList = new List<City>()
             {
@@ -24,5 +24,7 @@ namespace MauiAppTEST.TestData
 
             return cityList;
         }
+
+
     }
 }

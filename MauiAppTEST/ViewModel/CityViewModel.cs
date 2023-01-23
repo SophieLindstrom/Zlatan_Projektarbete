@@ -12,7 +12,6 @@ namespace MauiAppTEST.ViewModel
 
         CityServices cityService;
         public ObservableCollection<City> Cities { get; } = new();
-
         public CityViewModel()
         {
             LoadCities();
@@ -25,19 +24,9 @@ namespace MauiAppTEST.ViewModel
         //    base.OnNavigatedTo(args);
         //}
 
-        void LoadCities()
+        public void LoadCities()
         {
-            List<City> cities = new List<City>()
-                {
-                new City(){ Name="Paris", Image = "paris.png"},
-                new City(){ Name="Venice", Image = "venice.png"},
-                new City(){ Name="Rome", Image = "rome.png"},
-                new City(){ Name="Bangkok", Image = "bangkok.png" },
-                new City(){ Name="Stockholm", Image = "stockholm.png" },
-                new City(){ Name="New York", Image = "ny.png" },
-                new City(){ Name="Tokyo", Image = "tokyo.png"},
-                new City(){ Name="Los Angeles", Image = "la.png" },
-                 };
+            List<City> cities = CityServices.GetCities();
 
             foreach (var city in cities)
                 Cities.Add(city);

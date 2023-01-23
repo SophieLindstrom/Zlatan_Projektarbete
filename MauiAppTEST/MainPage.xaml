@@ -29,6 +29,9 @@
         <Button Text="ProfilePage"
                 Command="{Binding NavigateToProfilePageCommand}"/>
 
+        <Button Text="AdminPage"
+                Command="{Binding NavigateToAdminPageCommand}"/>
+
     </VerticalStackLayout>
 
 </ContentPage>
