@@ -45,7 +45,7 @@
         <Grid>
             <Frame Style="{StaticResource entryWrapper}">
                 <Grid ColumnDefinitions="*" ColumnSpacing="10">
-                    <Entry Placeholder="Email" x:Name="myTextBoxMail" Text="My text"
+                    <Entry Placeholder="Email" x:Name="LoginEmail" Text="{Binding LoginEmail}"
                     Grid.Column="2" />
                 </Grid>
             </Frame>
@@ -55,20 +55,26 @@
         <Grid>
             <Frame Style="{StaticResource entryWrapper}">
                 <Grid ColumnDefinitions="*" ColumnSpacing="10">
-                    <Entry Placeholder="Password" IsPassword="true" x:Name="myTextBoxPassword"  Text="My Text"
+                    <Entry Placeholder="Password" IsPassword="true" x:Name="LoginPassword" Text="{Binding LoginPassword}"
                     Grid.Column="2" />
                 </Grid>
             </Frame>
         </Grid>
         <Grid>
+
+            
+            
+            
+           
             <Button BackgroundColor="Blue" BorderColor="Transparent"
                 HeightRequest="50"
             Grid.Row="1"
             Grid.Column="0"
             Margin="8"
             Text="Sign in" FontSize="Medium"
+                    Command="{Binding AuthenticateUserCommand}"
             IsEnabled="{Binding IsNotBusy}"
-                />
+             />
 
 
         </Grid>

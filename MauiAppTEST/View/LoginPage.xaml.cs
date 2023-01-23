@@ -15,10 +15,5 @@ public partial class LoginPage : ContentPage
         base.OnNavigatedTo(args);
     }
 
-    //async void OnButtonClicked(object sender, EventArgs args)
-    //{
-    //    Console.WriteLine("Vi klickade");
-    //    await Shell.Current.GoToAsync(nameof(ProfilePage));
-    //}
 
 }
