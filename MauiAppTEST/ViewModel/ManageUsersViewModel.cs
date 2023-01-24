@@ -13,15 +13,19 @@ namespace MauiAppTEST.ViewModel
     [QueryProperty(nameof(User), nameof(User))]
     public partial class ManageUsersViewModel : BaseViewModel
     {
-        //public ObservableCollection<string> CommentList { get; } = new();
+        //public ObservableCollection<string> ThisUserCommentList { get; } = new();
 
         [ObservableProperty]
         User user;
 
-        public ObservableCollection<User> Users;
+
+        public ObservableCollection<User> Users = new();
+
+
+
         public ManageUsersViewModel()
         {
-            Users = LoadUsers();
+            LoadUsers();
             //LoadUserComments();
         }
 
@@ -35,17 +39,15 @@ namespace MauiAppTEST.ViewModel
         //    }
         //}
 
-        public ObservableCollection<User> LoadUsers()
+        public void LoadUsers()
         {
+
             List<User> users = UserServices.GetUsers();
-            ObservableCollection<User> tmp = new ObservableCollection<User>();
 
             foreach (var item in users)
             {
-                tmp.Add(item);
+                Users.Add(item);
             }
-
-            return tmp;
 
             //foreach (var user in users)
             //    Users.Add(user);

@@ -44,10 +44,11 @@ namespace MauiAppTEST.ViewModel
             if (user is null)
                 return;
 
-            await Shell.Current.GoToAsync($"{nameof(ManageUsersPage)}", new Dictionary<string, object>
+            await Shell.Current.GoToAsync($"{nameof(ManageUsersPage)}?ThisUsersCommentList={user.CommentList}", new Dictionary<string, object>
             {
-                {"User", user }
+                ["User"] = user
             });
+           
         }
     }
 }

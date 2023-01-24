@@ -3,6 +3,7 @@ using Microsoft.Maui.Controls;
 using System.Collections.ObjectModel;
 using MauiAppTEST.TestData;
 using MauiAppTEST.Services;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace MauiAppTEST.View;
 
@@ -91,6 +92,14 @@ public partial class AdminPage : ContentPage
             SetUserList(result);
         }
     }
+
+    //async void UserView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    //{
+    //    await Shell.Current.GoToAsync($"{nameof(ManageUsersPage)}", new Dictionary<string, object>
+    //    {
+    //        ["User"] = e.CurrentSelection
+    //    });
+    //}
 
     //private void NoResultCheck()
     //{

@@ -20,7 +20,7 @@ namespace MauiAppTEST.Services
                 new User(){ UserName="Peddo_Björnkillen1992", CommentList = new List<string>() { "ehh?"}},
                 new User(){ UserName="Svettig", CommentList = new List<string>() { "bryschaaaaan", "tror du på det själv eller?!"} },
                 new User(){ UserName="Coolaste_Shonon", CommentList = new List<string>() { "eyy grabbar, loogna er", "nae jag käkar pix o sont du vet, cool kille liksom"} },
-                new User(){ UserName="Mannen123", CommentList = new List<string>() { "son javla hurra hon e"} },
+                new User(){ UserName="Mannen123", CommentList = new List<string>() { "son javla hurra hon e"}, FirstName="Lasse" },
             };
 
             return userList;

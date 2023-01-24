@@ -22,8 +22,15 @@
                     <CollectionView BackgroundColor="Transparent"
                                 Grid.ColumnSpan="2"
                                 x:Name="UserView"
-                                BindingContext="{Binding User}"
+                                ItemsSource="{Binding User}"
                                 SelectionMode="None">
+                        
+                        
+                        <CollectionView.GroupHeaderTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding User.UserName}"/>
+                            </DataTemplate>
+                        </CollectionView.GroupHeaderTemplate>
 
                         <CollectionView.ItemTemplate>
                             <DataTemplate x:DataType="TestData:User">
@@ -31,22 +38,36 @@
                                 <VerticalStackLayout 
                                    Padding="0">
 
+                                    <Label Text="{Binding UserName}" Style="{StaticResource LargeLabel}" FontAttributes="Bold"/>
+
                                     <CollectionView BackgroundColor="Transparent"
-                                Grid.ColumnSpan="2"
                                 x:Name="userview2"
-                                ItemsSource="{Binding Path=CommentList}"
+                                ItemsSource="{Binding CommentList}"
                                 SelectionMode="None">
-                                        <CollectionView.EmptyView>
+                                        <!--<CollectionView.EmptyView>
                                             <Label Text="No comments to show" Style="{StaticResource LargeLabel}"/>
-                                        </CollectionView.EmptyView>
+                                        </CollectionView.EmptyView>-->
                                         <CollectionView.ItemTemplate>
-                                            <DataTemplate>
-                                                <ContentView>
-                                                    <Label Text="{Binding .}"
-                                                           Padding="10"
-                                                           Style="{StaticResource MediumLabel}"
-                                                            />
-                                                </ContentView>
+                                            <DataTemplate x:DataType="{x:Type x:String}">
+
+                                                <SwipeView>
+                                                    <SwipeView.RightItems>
+                                                        <SwipeItems>
+                                                            <SwipeItem
+                                                                        Text="Delete"
+                                                                        BackgroundColor="Red"
+                                                                        >
+                                                            </SwipeItem>
+                                                        </SwipeItems>
+                                                    </SwipeView.RightItems>
+
+                                                    <VerticalStackLayout>
+                                                        <Frame>
+                                                            <Label Text="{Binding .}" Style="{StaticResource MediumLabel}"/>
+                                                        </Frame>
+                                                    </VerticalStackLayout>
+                                                </SwipeView>
+
                                             </DataTemplate>
                                         </CollectionView.ItemTemplate>
                                     </CollectionView>
