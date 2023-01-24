@@ -37,6 +37,9 @@ namespace MauiAppTEST.ViewModel
         Task NavigateToAdminPage() => Shell.Current.GoToAsync(nameof(AdminPage));
 
         [RelayCommand]
+        Task NavigateToManageUsersPage() => Shell.Current.GoToAsync(nameof(ManageUsersPage));
+
+        [RelayCommand]
         Task Back() => Shell.Current.GoToAsync("..");
 
         //[ObservableProperty]

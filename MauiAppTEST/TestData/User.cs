@@ -16,6 +16,8 @@ namespace MauiAppTEST.TestData
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Comment { get; set; }
+        public string Likes { get; set; }
         public DateTime DateOfBirth { get; set; }
 
     }

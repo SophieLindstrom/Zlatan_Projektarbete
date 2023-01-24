@@ -48,6 +48,12 @@
                 <Setter Property="IsVisible" Value="true"/>
             </Style>
 
+            <Style x:Key="VerticalLayoutStyle1" TargetType="VerticalStackLayout">
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Spacing" Value="10"/>
+            </Style>
+
+
 
             <Style TargetType="Label" x:Key="BaseLabel">
                 <Setter Property="FontFamily" Value="OpenSansRegular" />

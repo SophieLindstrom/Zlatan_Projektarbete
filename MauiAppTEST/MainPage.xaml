@@ -32,6 +32,9 @@
         <Button Text="AdminPage"
                 Command="{Binding NavigateToAdminPageCommand}"/>
 
+        <Button Text="ManageUsersPage"
+                Command="{Binding NavigateToManageUsersPageCommand}"/>
+
     </VerticalStackLayout>
 
 </ContentPage>

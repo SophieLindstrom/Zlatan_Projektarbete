@@ -54,8 +54,6 @@ public partial class AdminPage : ContentPage
         ManageActivitiesFrame.Animate("HeightRequest", animation, length: 100);
     }
 
-
-
     private void SetCityList(List<City> cities)
     {
         CityView.ItemsSource = cities;

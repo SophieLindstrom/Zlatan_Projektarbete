@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppTEST.View.AdminPage"
-             xmlns:panel="clr-namespace:MauiExpansionPanel.Views;assembly=MauiExpansionPanel"
              xmlns:TestData="clr-namespace:MauiAppTEST.TestData"
              xmlns:viewmodel="clr-namespace:MauiAppTEST.ViewModel"
              x:DataType="viewmodel:AdminViewModel"
+             Shell.PresentationMode="ModalAnimated"
              Title="AdminPage">
 
     <ScrollView>
@@ -26,19 +26,20 @@
                                 Grid.ColumnSpan="2"
                                 x:Name="UserView"
                                 ItemsSource="{Binding Users}"
-                                SelectionMode="Multiple">
+                                SelectionMode="Single">
                         <CollectionView.ItemTemplate>
                             <DataTemplate x:DataType="TestData:User">
-                                <ScrollView>
 
-                                    <VerticalStackLayout 
-                                   Padding="0">
+                                    <VerticalStackLayout>
+                                        <!--<Frame.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding .}"
+                                                                  Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AdminViewModel}}, Path=GoToManageUsersPageCommand}"/>
+                                        </Frame.GestureRecognizers>-->
+
                                         <Label Text="{Binding UserName}"
-                                               Padding="10"
-                                       Style="{StaticResource MediumLabel}"
-                                           />
+                                                   Padding="10"
+                                                   Style="{StaticResource MediumLabel}" />
                                     </VerticalStackLayout>
-                                </ScrollView>
 
                             </DataTemplate>
                         </CollectionView.ItemTemplate>

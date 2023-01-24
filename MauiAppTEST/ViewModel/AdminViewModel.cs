@@ -1,5 +1,6 @@
 ﻿using MauiAppTEST.Services;
 using MauiAppTEST.TestData;
+using MauiAppTEST.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -34,6 +35,14 @@ namespace MauiAppTEST.ViewModel
 
             foreach (var user in users)
                 Users.Add(user);
+        }
+
+        async Task GoToManageUsersPage()
+        {
+            //if (city is null)
+            //    return;
+
+            await Shell.Current.GoToAsync($"{nameof(ManageUsersPage)}");
         }
     }
 }

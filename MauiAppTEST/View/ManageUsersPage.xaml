@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTEST.View.ManageUsersPage"
+             xmlns:TestData="clr-namespace:MauiAppTEST.TestData"
+             xmlns:viewmodel="clr-namespace:MauiAppTEST.ViewModel"
+             x:DataType="viewmodel:ManageUsersViewModel"
+             Shell.PresentationMode="ModalAnimated"
+             Title="ManageUsersPage">
+    
+    <VerticalStackLayout>
+        <Label Text="Click one to expand" Style="{StaticResource LargeLabel}"/>
+        <Button Text="See user comments" Clicked="ManageUserComments"></Button>
+        <Frame x:Name="ManageUsersFrame" IsVisible="False">
+            <ScrollView>
+
+                <VerticalStackLayout Style="{StaticResource VerticalLayoutStyle1}">
+                    <!--<Button Text="Remove User" Style="{StaticResource SmallButton}"></Button>-->
+                    <!--<Button Text="Remove User Comment" Style="{StaticResource SmallButton}"></Button>-->
+                    
+                    <CollectionView BackgroundColor="Transparent"
+                                Grid.ColumnSpan="2"
+                                x:Name="UserView"
+                                ItemsSource="{Binding Users}"
+                                SelectionMode="Single">
+                        
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="TestData:User">
+
+                                <VerticalStackLayout 
+                                   Padding="0">
+                                    <Label Text="{Binding Comment}"
+                                           Padding="10"
+                                           Style="{StaticResource MediumLabel}"
+                                           />
+                                </VerticalStackLayout>
+
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </VerticalStackLayout>
+            </ScrollView>
+
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
