@@ -36,7 +36,6 @@
                                         </Frame.GestureRecognizers>
 
                                         <Label Text="{Binding UserName}"
-                                                   Padding="10"
                                                    Style="{StaticResource MediumLabel}" />
                                     </Frame>
 

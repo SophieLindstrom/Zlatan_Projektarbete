@@ -13,14 +13,14 @@ namespace MauiAppTEST.Services
         {
             List<User> userList = new List<User>()
             {
-                new User(){ UserName="Prince_Charming69", Comment="HAHHAHA" },
-                new User(){ UserName="Janne", Comment="SVETTIG" },
-                new User(){ UserName="Svettig_Runkare", Comment="What's wrong with being racist LuL XD?" },
-                new User(){ UserName="Apan", Comment="Ahmed kmr doda dig mannen" },
-                new User(){ UserName="Peddo_Björnkillen1992", Comment="Eeeeehhh, okej?" },
-                new User(){ UserName="Svettig", Comment="passa dig bror" },
-                new User(){ UserName="Coolaste_Shonon", Comment="Eyyy grabbar looogna er" },
-                new User(){ UserName="Mannen123", Comment="Son javla hura hon e" },
+                new User(){ UserName="Prince_Charming69", CommentList = new List<string>() { "HAHAHAHA", "VAD GÖR DU?!??!"} },
+                new User(){ UserName="Janne", CommentList = new List<string>() { "SVETTIG XD", "WHAT?!", "hehehe, sluta"} },
+                new User(){ UserName="Svettig_Runkare", CommentList = new List<string>() { "HAHAHAHA", "What's wrong with being racist LuL XD?", "snopp", "mutta" } },
+                new User(){ UserName="Apan",  CommentList = new List<string>() { "ahmed kommer doda dig mannen" }},
+                new User(){ UserName="Peddo_Björnkillen1992", CommentList = new List<string>() { "ehh?"}},
+                new User(){ UserName="Svettig", CommentList = new List<string>() { "bryschaaaaan", "tror du på det själv eller?!"} },
+                new User(){ UserName="Coolaste_Shonon", CommentList = new List<string>() { "eyy grabbar, loogna er", "nae jag käkar pix o sont du vet, cool kille liksom"} },
+                new User(){ UserName="Mannen123", CommentList = new List<string>() { "son javla hurra hon e"} },
             };
 
             return userList;
