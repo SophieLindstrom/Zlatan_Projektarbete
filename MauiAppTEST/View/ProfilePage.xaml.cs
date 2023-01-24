@@ -9,4 +9,11 @@ public partial class ProfilePage : ContentPage
 		InitializeComponent();
 		BindingContext = vm;
 	}
+
+	private void OnProfileInfoButtonClicked(object sender, EventArgs e)
+	{
+		Console.WriteLine("hej");
+	}
+
+        
 }

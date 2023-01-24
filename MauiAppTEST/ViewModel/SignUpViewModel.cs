@@ -17,6 +17,7 @@ namespace MauiAppTEST.ViewModel
         public string SignupLastname { get; set; }
         public string SignupEmail { get; set; }
         public string SignupPassword { get; set; }
+        public string SignupEmailVerify { get; set; }
         public SignUpViewModel() {
         
         }
@@ -29,7 +30,7 @@ namespace MauiAppTEST.ViewModel
 
             // Gör ett api-call
 
-            //boolean signedUp = await api.sigup(SignupFirstname, SignupLastname, SignupEmail, SignupPassword );
+            //boolean signedUp = await api.sigup(SignupFirstname, SignupLastname, SignupEmail, SignupEmailVerify, SignupPassword,  );
 
             // if (signedUp)
             // {

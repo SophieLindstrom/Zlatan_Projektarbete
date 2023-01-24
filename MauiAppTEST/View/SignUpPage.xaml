@@ -6,77 +6,86 @@
              x:DataType="viewmodel:SignUpViewModel"
              Title="Register to have a good time!">
     <ScrollView>
+
+        <ScrollView.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="Orange"
+                          Offset="0.1" />
+                <GradientStop Color="Purple"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+
+        </ScrollView.Background>
+
         <VerticalStackLayout 
-            Spacing="25" 
-            Padding="30,0" 
+            Margin="0"
+            Spacing="15" 
+            Padding="20,50" 
             VerticalOptions="Center">
+           
+
+                <Image
+                Source="logo.png"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+           
 
             <Label 
                 Text="Sign up to interact"
-                TextColor="Black"
+                TextColor="White"
                 FontAttributes="Bold"
                 FontSize="16"
                 HorizontalOptions="Center" />
 
-            <HorizontalStackLayout VerticalOptions="Center"
-                                   HorizontalOptions="FillAndExpand"
-                                   BackgroundColor="#e1e1e1"
-                                   Padding="10,0,10,0"
-                                   SemanticProperties.HeadingLevel="Level2">
-                <Entry 
-                Placeholder="First name"
-                HorizontalOptions="FillAndExpand"
-                    PlaceholderColor="Black"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Enter mail id"
-                    x:Name="SignupFirstname" Text="{Binding SignupFirstname}"
-                FontSize="14"/>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout VerticalOptions="Center"
-                                   HorizontalOptions="FillAndExpand"
-                                   BackgroundColor="#e1e1e1"
-                                   Padding="10,0,10,0"
-                                   SemanticProperties.HeadingLevel="Level2">
-                <Entry 
-                Placeholder="Last name"
-                HorizontalOptions="FillAndExpand"
-                    PlaceholderColor="Black"
-                    SemanticProperties.Description="Lastname"
-                SemanticProperties.HeadingLevel="Level2"
-                x:Name="SignupLastname" Text="{Binding SignupLastname}"
-                FontSize="14"/>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout VerticalOptions="Center"
-                                   HorizontalOptions="FillAndExpand"
-                                   BackgroundColor="#e1e1e1"
-                                   Padding="10,0,10,0"
-                                   SemanticProperties.HeadingLevel="Level2">
-                
-                <Entry 
-                Placeholder="Email"
-                HorizontalOptions="FillAndExpand"
-                    PlaceholderColor="Black"
-                SemanticProperties.HeadingLevel="Level2"
-                    SemanticProperties.Description="Email"
-                x:Name="SignupEmail" Text="{Binding SignupEmail}"
-                FontSize="14"/>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout VerticalOptions="Center"
-                                   HorizontalOptions="FillAndExpand"
-                                   BackgroundColor="#e1e1e1"
-                                   Padding="10,0,10,0"
-                                   SemanticProperties.HeadingLevel="Level2">
-                <Entry 
-               
-                Placeholder="Password"
-                    PlaceholderColor="Black"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Enter password"
-                    x:Name="SignupPassword" Text="{Binding SignupPassword}"
-                FontSize="14"
-                HorizontalOptions="FillAndExpand"
-                IsPassword="True"/>
-            </HorizontalStackLayout>
+            <Grid RowSpacing="0" RowDefinitions="*" Margin="0" Padding="0">
+                <Frame Padding="5" Margin="0" IsClippedToBounds="True" CornerRadius="8" BackgroundColor="#50FFFFFF" >
+                    
+                        <Entry Placeholder="First name" x:Name="SignupFirstname" Margin="0" Text="{Binding SignupFirstname}"
+                     PlaceholderColor="black"/>
+                    
+                </Frame>
+
+            </Grid>
+            <Grid>
+                <Frame Padding="5" Margin="0" IsClippedToBounds="True" CornerRadius="8" BackgroundColor="#50FFFFFF" >
+                    <Grid Margin="0" Padding="0">
+                        <Entry Placeholder="Last name" x:Name="SignupLastname" Text="{Binding SignupLastname}"
+                     PlaceholderColor="black"/>
+                    </Grid>
+                </Frame>
+
+            </Grid>
+            <Grid>
+                <Frame Padding="5,5,5,5" Margin="0" IsClippedToBounds="True" CornerRadius="8" BackgroundColor="#50FFFFFF" >
+                    <Grid>
+                        <Entry Placeholder="Email" x:Name="SignupEmail" Text="{Binding SignupEmail}"
+                     PlaceholderColor="black"/>
+                    </Grid>
+                </Frame>
+
+            </Grid>
+            <Grid>
+                <Frame Padding="5,5,5,5" Margin="0" IsClippedToBounds="True" CornerRadius="8" BackgroundColor="#50FFFFFF" >
+                    <Grid>
+                        <Entry Placeholder="Verify email" x:Name="SignupEmailVerify" Text="{Binding SignupEmailVerify}"
+                     PlaceholderColor="black"/>
+                    </Grid>
+                </Frame>
+
+            </Grid>
+            <Grid Margin="0,0,0,30">
+                <Frame Padding="5,5,5,5" Margin="0" IsClippedToBounds="True" CornerRadius="8" BackgroundColor="#50FFFFFF" >
+                    <Grid>
+                        <Entry Placeholder="Password" x:Name="SignupPassword" Text="{Binding SignupPassword}"
+                     PlaceholderColor="black"/>
+                    </Grid>
+                </Frame>
+
+            </Grid>
+
+
+
             <Button 
                 x:Name="btn_register"
                 Text="Register"

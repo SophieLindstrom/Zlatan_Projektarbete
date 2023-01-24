@@ -87,7 +87,7 @@
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="BackgroundColor" Value="Transparent" />
                 <Setter Property="FontAttributes" Value="None" />
-                <Setter Property="TextColor" Value="Blue" />
+                <Setter Property="TextColor" Value="Black" />
             </Style>
             <Style x:Key="entryWrapper"
                TargetType="Frame">
