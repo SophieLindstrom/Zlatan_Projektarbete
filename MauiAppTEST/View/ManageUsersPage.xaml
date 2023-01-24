@@ -7,9 +7,10 @@
              x:DataType="viewmodel:ManageUsersViewModel"
              Shell.PresentationMode="ModalAnimated"
              Title="ManageUsersPage">
-    
+
     <VerticalStackLayout>
         <Label Text="Click one to expand" Style="{StaticResource LargeLabel}"/>
+        <Label Text="{Binding User.UserName}" Style="{StaticResource LargeLabel}"/>
         <Button Text="See user comments" Clicked="ManageUserComments"></Button>
         <Frame x:Name="ManageUsersFrame" IsVisible="False">
             <ScrollView>
@@ -17,22 +18,39 @@
                 <VerticalStackLayout Style="{StaticResource VerticalLayoutStyle1}">
                     <!--<Button Text="Remove User" Style="{StaticResource SmallButton}"></Button>-->
                     <!--<Button Text="Remove User Comment" Style="{StaticResource SmallButton}"></Button>-->
-                    
+
                     <CollectionView BackgroundColor="Transparent"
                                 Grid.ColumnSpan="2"
                                 x:Name="UserView"
-                                ItemsSource="{Binding Users}"
-                                SelectionMode="Single">
-                        
+                                BindingContext="{Binding User}"
+                                SelectionMode="None">
+
                         <CollectionView.ItemTemplate>
                             <DataTemplate x:DataType="TestData:User">
 
                                 <VerticalStackLayout 
                                    Padding="0">
-                                    <Label Text="{Binding Comment}"
-                                           Padding="10"
-                                           Style="{StaticResource MediumLabel}"
-                                           />
+
+                                    <CollectionView BackgroundColor="Transparent"
+                                Grid.ColumnSpan="2"
+                                x:Name="userview2"
+                                ItemsSource="{Binding Path=CommentList}"
+                                SelectionMode="None">
+                                        <CollectionView.EmptyView>
+                                            <Label Text="No comments to show" Style="{StaticResource LargeLabel}"/>
+                                        </CollectionView.EmptyView>
+                                        <CollectionView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ContentView>
+                                                    <Label Text="{Binding .}"
+                                                           Padding="10"
+                                                           Style="{StaticResource MediumLabel}"
+                                                            />
+                                                </ContentView>
+                                            </DataTemplate>
+                                        </CollectionView.ItemTemplate>
+                                    </CollectionView>
+
                                 </VerticalStackLayout>
 
                             </DataTemplate>

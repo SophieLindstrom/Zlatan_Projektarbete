@@ -17,13 +17,10 @@ public partial class ManageUsersPage : ContentPage
     {
         base.OnNavigatedTo(args);
     }
-
     private void SetUserList(List<User> users)
     {
         UserView.ItemsSource = users;
     }
- 
-
     private void ManageUserComments(object sender, EventArgs e)
     {
         var animation = new Animation();

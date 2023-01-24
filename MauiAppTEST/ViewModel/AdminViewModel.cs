@@ -41,10 +41,13 @@ namespace MauiAppTEST.ViewModel
         [RelayCommand]
         async Task GoToManageUsersPage(User user)
         {
-            //if (city is null)
-            //    return;
+            if (user is null)
+                return;
 
-            await Shell.Current.GoToAsync($"{nameof(ManageUsersPage)}");
+            await Shell.Current.GoToAsync($"{nameof(ManageUsersPage)}", new Dictionary<string, object>
+            {
+                {"User", user }
+            });
         }
     }
 }

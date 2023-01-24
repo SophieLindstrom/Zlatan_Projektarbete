@@ -51,7 +51,6 @@
             </Frame>
         </Grid>
         
-        
         <Grid>
             <Frame Style="{StaticResource entryWrapper}">
                 <Grid ColumnDefinitions="*" ColumnSpacing="10">
@@ -62,10 +61,6 @@
         </Grid>
         <Grid>
 
-            
-            
-            
-           
             <Button BackgroundColor="Blue" BorderColor="Transparent"
                 HeightRequest="50"
             Grid.Row="1"
