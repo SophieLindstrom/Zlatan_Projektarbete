@@ -29,17 +29,16 @@
                                 SelectionMode="Single">
                         <CollectionView.ItemTemplate>
                             <DataTemplate x:DataType="TestData:User">
-
-                                    <VerticalStackLayout>
-                                        <!--<Frame.GestureRecognizers>
+                                    <Frame>
+                                        <Frame.GestureRecognizers>
                                             <TapGestureRecognizer CommandParameter="{Binding .}"
                                                                   Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AdminViewModel}}, Path=GoToManageUsersPageCommand}"/>
-                                        </Frame.GestureRecognizers>-->
+                                        </Frame.GestureRecognizers>
 
                                         <Label Text="{Binding UserName}"
                                                    Padding="10"
                                                    Style="{StaticResource MediumLabel}" />
-                                    </VerticalStackLayout>
+                                    </Frame>
 
                             </DataTemplate>
                         </CollectionView.ItemTemplate>

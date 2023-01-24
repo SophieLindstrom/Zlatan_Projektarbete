@@ -1,4 +1,5 @@
-﻿using MauiAppTEST.Services;
+﻿using CommunityToolkit.Mvvm.Input;
+using MauiAppTEST.Services;
 using MauiAppTEST.TestData;
 using MauiAppTEST.View;
 using System;
@@ -37,7 +38,8 @@ namespace MauiAppTEST.ViewModel
                 Users.Add(user);
         }
 
-        async Task GoToManageUsersPage()
+        [RelayCommand]
+        async Task GoToManageUsersPage(User user)
         {
             //if (city is null)
             //    return;

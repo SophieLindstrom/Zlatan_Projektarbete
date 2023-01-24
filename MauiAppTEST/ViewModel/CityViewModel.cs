@@ -32,7 +32,6 @@ namespace MauiAppTEST.ViewModel
                 Cities.Add(city);
         }
 
-
         [RelayCommand]
         async Task GoToActivityPageAsync(City city)
         {

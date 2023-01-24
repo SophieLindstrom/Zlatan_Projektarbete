@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace MauiAppTEST.ViewModel
 {
-    public partial class ManageUsersViewModel
+    [QueryProperty("Text", "Text")]
+    public partial class ManageUsersViewModel : BaseViewModel
     {
-
         public ObservableCollection<User> Users { get; } = new();
 
         public ManageUsersViewModel()
