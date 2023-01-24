@@ -6,35 +6,59 @@
              x:DataType="viewmodel:SignUpViewModel"
              Title="Register to have a good time!">
     <ScrollView>
+
+        <ScrollView.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="Orange"
+                          Offset="0.1" />
+                <GradientStop Color="Purple"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+
+        </ScrollView.Background>
+
         <VerticalStackLayout 
+
             Spacing="25" 
             Padding="30,0" 
             VerticalOptions="Center">
+           
+
+                <Image
+                Source="logo.png"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+           
 
             <Label 
                 Text="Sign up to interact"
-                TextColor="Black"
+                TextColor="White"
                 FontAttributes="Bold"
                 FontSize="16"
                 HorizontalOptions="Center" />
 
-            <HorizontalStackLayout VerticalOptions="Center"
+            
+
+                    <HorizontalStackLayout VerticalOptions="Center"
                                    HorizontalOptions="FillAndExpand"
-                                   BackgroundColor="#e1e1e1"
+                                   BackgroundColor="#50FFFFFF"
+                                   
                                    Padding="10,0,10,0"
                                    SemanticProperties.HeadingLevel="Level2">
+                
                 <Entry 
-                Placeholder="First name"
+                Placeholder="First name" 
                 HorizontalOptions="FillAndExpand"
                     PlaceholderColor="Black"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Enter mail id"
+                    BackgroundColor="Transparent"
                     x:Name="SignupFirstname" Text="{Binding SignupFirstname}"
                 FontSize="14"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout VerticalOptions="Center"
                                    HorizontalOptions="FillAndExpand"
-                                   BackgroundColor="#e1e1e1"
+                                   BackgroundColor="#50FFFFFF"
                                    Padding="10,0,10,0"
                                    SemanticProperties.HeadingLevel="Level2">
                 <Entry 
@@ -43,19 +67,20 @@
                     PlaceholderColor="Black"
                     SemanticProperties.Description="Lastname"
                 SemanticProperties.HeadingLevel="Level2"
+                    BackgroundColor="Transparent"
                 x:Name="SignupLastname" Text="{Binding SignupLastname}"
                 FontSize="14"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout VerticalOptions="Center"
                                    HorizontalOptions="FillAndExpand"
-                                   BackgroundColor="#e1e1e1"
+                                   BackgroundColor="#50FFFFFF"
                                    Padding="10,0,10,0"
                                    SemanticProperties.HeadingLevel="Level2">
                 
                 <Entry 
                 Placeholder="Email"
                 HorizontalOptions="FillAndExpand"
-                    PlaceholderColor="Black"
+                    PlaceholderColor="black"
                 SemanticProperties.HeadingLevel="Level2"
                     SemanticProperties.Description="Email"
                 x:Name="SignupEmail" Text="{Binding SignupEmail}"
@@ -63,7 +88,22 @@
             </HorizontalStackLayout>
             <HorizontalStackLayout VerticalOptions="Center"
                                    HorizontalOptions="FillAndExpand"
-                                   BackgroundColor="#e1e1e1"
+                                   BackgroundColor="#50FFFFFF"
+                                   Padding="10,0,10,0"
+                                   SemanticProperties.HeadingLevel="Level2">
+
+                <Entry 
+                Placeholder="Verify email"
+                HorizontalOptions="FillAndExpand"
+                    PlaceholderColor="Black"
+                SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Email"
+                x:Name="SignupEmailVerify" Text="{Binding SignupEmailVerify}"
+                FontSize="14"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout VerticalOptions="Center"
+                                   HorizontalOptions="FillAndExpand"
+                                   BackgroundColor="#50FFFFFF"
                                    Padding="10,0,10,0"
                                    SemanticProperties.HeadingLevel="Level2">
                 <Entry 

@@ -51,6 +51,8 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\bangkok.png" />
 	  <None Remove="Resources\Images\LA.png" />
+	  <None Remove="Resources\Images\Logo.png" />
+	  <None Remove="Resources\Images\monalisa.png" />
 	  <None Remove="Resources\Images\NY.png" />
 	  <None Remove="Resources\Images\paris.png" />
 	  <None Remove="Resources\Images\Rome.png" />
